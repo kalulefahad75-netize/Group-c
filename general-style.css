@@ -1,7 +1,7 @@
 /* Global font and color scheme */
 body {
   font-family: 'Poppins', sans-serif;
-  background-image: url("17.jpg");
+  background-image: url("71.png");
   background-repeat: no-repeat;     
   background-size: cover;           
   background-attachment: fixed;     
@@ -15,11 +15,26 @@ body {
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .gallery-img:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
+/*sliding from right to left*/ 
+@keyframes slideRightToLeft {
+  0% {
+    transform: translateX(100%); 
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /*This ends original position*/
+    opacity: 1;
+  }
+}
+
+.main h1 {
+  animation: slideRightToLeft 2s ease-out forwards;
+}
+
 
 
 
